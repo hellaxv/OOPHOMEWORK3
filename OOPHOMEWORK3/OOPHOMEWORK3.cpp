@@ -109,7 +109,7 @@ public:
         cout << "\n" << "(Конструктор)\n" << "company - " << company << "\nmodel - " << model << endl;
     }
 
-    virtual ~Car()
+    virtual ~Car() //virtual преопределить в любом наследнике.
     {
         cout << "\nДеструктор базового класса Car сработал!";  //деструктор базового класса.
     }
