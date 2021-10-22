@@ -375,7 +375,7 @@ int main()
         obzac2();
         Minivan* minivan = new Minivan("Audi", "eTron");
         obzac2();
-        delete minivan;
+        delete minivan; //чтобы сработал деконструктор.
         delete bus;
         delete passengercar;
         delete car;
