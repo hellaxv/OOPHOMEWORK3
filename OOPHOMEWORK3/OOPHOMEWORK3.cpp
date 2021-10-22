@@ -177,7 +177,7 @@ public:
 2.унарный оператор (-)
 3.логические операторы сравнения двух дробей (==, !=, <, >, <=, >=). 
 */
-class Fraction 
+class Fraction //Fraction в переводе "Дробная часть".
 {
 protected:
     double numerator, denominator; //перевод: numerator(числитесь), denominator(знаменатель).
