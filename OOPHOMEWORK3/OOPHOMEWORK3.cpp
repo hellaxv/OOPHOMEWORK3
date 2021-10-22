@@ -400,4 +400,5 @@ int main()
         if (d1 >= d2) cout << "\nFraction 1 >= Fraction 2";
         obzac1();
     }
+    return 0;
 }
