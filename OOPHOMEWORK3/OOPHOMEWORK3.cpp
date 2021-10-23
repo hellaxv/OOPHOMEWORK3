@@ -101,7 +101,11 @@ class Car
 protected:
     string company, model; //поля для класса. стринг дает возможность писать большим колл-вом строк, а не с 1 символом.
 public:
-    Car() {}
+    Car()
+    {
+        company = "Doodge";
+        model = "Demon";
+    }
     Car(string xCompany, string vModel) : company(xCompany), model(vModel)
     {
         setlocale(LC_ALL, "rus");
@@ -119,7 +123,11 @@ class PassengerCar : virtual public Car
 {
 public:
     
-    PassengerCar() {}
+    PassengerCar()
+    {
+        company = "laFerrari";
+        model = "Pick";
+    }
     PassengerCar(string xCompany, string vModel) : Car(xCompany, vModel)
     {
         setlocale(LC_ALL, "rus");
@@ -137,7 +145,11 @@ class Bus : virtual public Car
 {
 public:
     
-    Bus() {}
+    Bus() 
+    {
+        company = "Renault";
+        model = "Bus";
+    }
     Bus(string xCompany, string vModel) : Car(xCompany, vModel)
     {
         setlocale(LC_ALL, "rus");
@@ -154,7 +166,11 @@ public:
 class Minivan : public PassengerCar, public Bus //делаем сразу двойное присвоение.
 {
 public:
-    
+    Minivan() 
+    {
+        company = "Audi";
+        model = "eTron";
+    }
     Minivan(string xCompany, string vModel) : Car(xCompany, vModel)
     {
         setlocale(LC_ALL, "rus");
@@ -367,18 +383,22 @@ int main()
 
     {
         obzac();
-        Car* car = new Car("Doodge", "Demon");
+        Car car;
+        car.Print();
         obzac2();
-        PassengerCar* passengercar = new PassengerCar("laFerrari", "Pick");
+        PassengerCar passengercar;
+        passengercar.Print();
         obzac2();
-        Bus* bus = new Bus("Renault", "Bus");
+        Bus bus;
+        bus.Print();
         obzac2();
-        Minivan* minivan = new Minivan("Audi", "eTron");
+        Minivan minivan;
+        minivan.Print();
         obzac2();
-        delete minivan; //чтобы сработал деконструктор.
+        /*delete minivan; //чтобы сработал деконструктор.
         delete bus;
         delete passengercar;
-        delete car;
+        delete car;*/
         obzac1();
     }
 
